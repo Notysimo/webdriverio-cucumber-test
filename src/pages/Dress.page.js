@@ -18,7 +18,7 @@ class DressPage {
     addADressToCart(){
         if (this.printedDressImage.isExisting()) {
             this.printedDressImage.click();
-            this.addToCartButton.waitForEnabled();
+            this.addToCartButton.waitForExist();
             this.addToCartButton.click();
             this.addToCartButton.click();
             this.addToCartButton.click();

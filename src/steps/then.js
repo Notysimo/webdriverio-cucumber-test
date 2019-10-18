@@ -17,3 +17,7 @@ Then(/^a dress is in the cart$/, () => {
         'Printed Dress'
     );
 });
+
+Then(/^a dress is payed by check$/,() => {
+    assert.equal(orderPage.orderSuccessDiv.getText(), 'Your order on My Store is complete.');
+});

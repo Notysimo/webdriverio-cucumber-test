@@ -3,6 +3,7 @@ const { When } = require('cucumber');
 const setInputField = require('../support/action/setInputField');
 const loginPage = require('../pages/Login.page');
 const dressPage = require('../pages/Dress.page');
+const orderPage = require('../pages/Order.page');
 const context = require('../../data/Context');
 
 When(
@@ -15,5 +16,9 @@ When(/^I log in with a notysimo user$/, () => {
 });
 
 When(/^I add a dress to the cart$/,() =>{
-    dressPage.addADressToCart()
+    dressPage.addADressToCart();
+});
+
+When (/^I pay for a dress$/,() =>{
+    orderPage.checkOutOrder();
 });
